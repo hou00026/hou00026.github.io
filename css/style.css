@@ -1,0 +1,340 @@
+/* import font family from google */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* set the variables for using color easily and consistently*/
+:root {
+    --font-color:#333131;
+    --foot-btn:#ff8480;
+    --yellow:#fffd8c;
+    --blue:#57eead;
+    --white:#f7f7ff;
+    --shadow:rgba(51, 49, 49, 0.4); 
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    color: var(--font-color);
+}
+
+body {
+    background-color: var(--white);
+}
+
+/* I plan to set the layout to grid for outest layer layout, in order to make desktop size to 2 dementional layout */
+.main-wrap {
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 125px 1fr 1fr;
+    grid-gap: 2rem;
+    height: 100%;
+    justify-content: center;
+    background-image: url(../images/bg-image/scooter.svg);
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    background-size: contain;
+}
+
+.header-logo{
+    width: 105px;
+}
+
+/*  style text based on the visual XD file*/
+.container-title h1 {
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 73px;
+    margin: 0px;
+}
+
+.container-title p {
+    font-size: 24px;
+    line-height: 29px;
+}
+
+/* give form a background style */
+.main-form {
+    width: 100%;
+    border-radius: 26px;
+    background-color: #ffffff;
+    box-shadow: 5px 10px 15px var(--shadow);
+    padding: 25px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 49px;
+}
+
+.form-p {
+    font-size: 16px;
+    line-height: 19px;
+    margin: 10px 0;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 25px;
+    
+}
+
+/* style the input section */
+.form-group [type="text"] {
+    border: none;
+    border-radius: 11px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px;
+    height: 40px;
+    background-color: #f4f4f5;
+    
+}
+
+/* in order to make check square to match the visual effect, I plan to add a pseudo ::before and ::after to make up a square, and then, use position to change the pseudo elements' positon */
+.form-group:nth-of-type(6){
+    position: relative;
+    margin-bottom: 18px;
+}
+
+[type="checkbox"] { 
+    opacity: 0;
+}
+
+.checkbox-label {
+    display: inline-block;
+    font-size: 16px;
+    line-height: 45px;
+    margin-left: 15px;
+}
+
+.checkbox-label::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid var(--font-color);
+    position: absolute;
+    top: 9px;
+    left: 0;
+}
+
+/* when check the square, appearing a point shape indicates our user has checked this opition */
+[type="checkbox"]:checked + .checkbox-label::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: var(--font-color);
+    border-radius: 100%;
+    border: none;
+    position: absolute;
+    top: 20px;
+    left: 11px;
+}
+
+/* style the button to match the visual effect */
+.main-form .btn {
+    width:100%;
+    text-align: center;
+    border: none;
+    border-radius: 11px;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 55px;
+    background-color: var(--blue);
+}
+
+/* the bottom text styling */
+.main-form .form-bottom {
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.main-form .color-text {
+    color: var(--foot-btn)
+}
+
+/* footer section */
+.footer {
+    background-color: var(--yellow);
+    padding: 10px;
+    margin-top: 2rem ;
+    border: none;   
+}
+
+/* foot-container includs all the elements appear in the footer part, set width to match the width of main-wrap part. */
+.footer-container {
+    width: 85%;
+    margin: 20px auto;
+}
+
+/* give the footer-form a grid and gap to match the layout of visual effect */
+.footer-form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    margin: 10px 0;
+}
+
+.footer-form h4 {
+    grid-column: span 2;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 22px;
+}
+
+.footer-form p {
+    grid-column: span 2;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 19px;
+}
+
+.footer-input {
+    height: 40px;
+    border-radius: 11px;
+    border: none;
+    padding: 0 10px;
+}
+
+.footer-form > .hours {
+    width: 100%;
+
+}
+
+.footer-form > .city {
+    width: 100%;
+}
+
+.footer-form > .footer-btn {
+    width:100%;
+    grid-column: 1 / span 2;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: var(--foot-btn);
+    color: var(--white);
+}
+
+/* arrange social media icons use flex, it will center the social-icon as well as rearrange the layout and in desktop size*/
+.footer-icon {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem 0 0 0;
+}
+
+.social-icon {
+    margin: 0 1rem;
+}
+
+@media (min-width: 768px ) {
+    /* for tablets */
+
+    /* give 3 columns in a row to reset the layout of footer-form */
+    .footer-form {
+        grid-template-columns: 1fr 2fr 2fr;
+    }
+
+    .footer-form h4 {
+        grid-column: span 3;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 22px;
+    }
+    
+    .footer-form p {
+        grid-column: span 3;
+        font-size: 16px;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 19px;
+    }
+
+    .footer-form > .footer-btn {
+        grid-column: 3 / 4;
+    }
+}
+
+@media (min-width: 992px ){
+    /* for desktop */
+
+    /* set the grid to 2x2 . */
+    .main-wrap {
+        max-width: 1980px;
+        width: 85%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 125px auto;
+        grid-gap: 4rem;
+        height: 100%;
+    }
+
+    .header {
+        grid-column: span 2;
+    }
+
+    .container-title {
+        width:75%;
+    }
+    .container-title h1 {
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 97px;
+    margin: 0px;
+    }
+
+    .main-form {
+        width: 100%;
+        margin-left: auto;
+        border-radius: 26px;
+        background-color: #ffffff;
+        box-shadow: 5px 10px 15px var(--shadow);
+        padding: 25px;
+    }
+    
+    .form-p {
+        font-size: 24px;
+        line-height: 29px;
+        margin: 10px 0;
+    }
+
+    .form-p::after {
+        content: " to get started.";
+    }
+
+    .form-group [type="text"] {
+        height: 55px;
+    }
+
+    /* footer  align the form and icons horizontally. */
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .footer-form {
+        flex-basis: 60%;
+    }
+
+    /* align-items: center to make the icons in the middle of the height. margin-left: auto fixed icons in the end horizontally */
+    .footer-icon {
+        align-items: center;
+        margin-left: auto;  
+    }
+
+    .social-icon:nth-child(2){
+        order: -2;
+    }
+
+    .social-icon:nth-child(3){
+        order: -1;
+    }
+
+}
