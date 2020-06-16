@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/favicon.ico">
+</head>
+
+<body>
+    <!-- grab all the content above the footer as a wrap, in order to use grid  to implement responsive layout -->
+    <main class="main-wrap">
+        <header class="header">
+            <img class="header-logo" src="./images/logo/logo.png" alt="dash-logo">
+        </header>
+        <section class="container">
+            <div class="container-title">
+                <H1>Want to be your own boss?</H1>
+                <p>Start today and make up to $30/hr driving your own vehicle with Dash! </p>
+            </div>
+        </section>
+        <form method="POST" class="main-form">
+            <fieldset>
+                <div class="form-title">
+                    <h2>Apply Now</h2>
+                    <p class="form-p">Enter your info below</p>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="first-name" class="first-name" placeholder="First name"></div>
+                <div class="form-group">
+                    <input type="text" id="last-name" class="last-name" placeholder="Last name">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="phone-number" class="phone-number" placeholder="Phone number"></div>
+                <div class="form-group">
+                    <input type="text" id="email" class="email" placeholder="Email Address">
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="agreement" name="agreement" value="agree">
+                    <label for="agreement" class="checkbox-label">I agree to dash terms</label>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn">DRIVE WITH US</button>
+                </div>
+                <div class="form-bottom">
+                    <span>Already applied?</span>
+                    <span class="color-text">Check your application status here</span>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- define two part for footer. in order to use flex layout -->
+            <form method="POST" class="footer-form">
+                 <h4>See how much you can earn with Dash</h4>
+                <p>how many hours do you want to drive with us this week?</p>
+                <input type="text" id="hours" class="footer-input hours" placeholder="Hours">
+                <input type="text" id="city" class="footer-input city" placeholder="City">
+                <button class="footer-input footer-btn" type="submit">CALCULATE</button>
+    
+            </form>
+            <div class="footer-icon">
+                <a href="#" class="social-icon"><img class="img" src="./images/icons/facebook.svg" alt="facebook-link"> 
+                </a>
+                <a href="#" class="social-icon"><img class="img" src="./images/icons/instagram.svg" alt="instagram-link"> 
+                </a>
+                <a href="#" class="social-icon"><img class="img" src="./images/icons/twitter.svg" alt="twitter-link"> 
+                </a>
+                <a href="#" class="social-icon"><img class="img" src="./images/icons/linkedin.svg" alt="linkedin-link"> 
+                </a>
+            </div>
+        </div>    
+    </footer>
+
+</body>
+
+</html>
