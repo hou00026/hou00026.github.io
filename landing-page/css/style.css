@@ -24,7 +24,7 @@ body {
 /* I plan to set the layout to grid for outest layer layout, in order to make desktop size to 2 dementional layout */
 .main-wrap {
     width: 85%;
-    margin: 0 auto;
+    margin: 25px auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 125px 1fr 1fr;
@@ -33,8 +33,8 @@ body {
     justify-content: center;
     background-image: url(../images/bg-image/scooter.svg);
     background-repeat: no-repeat;
-    background-position: center 40%;
-    background-size: contain;
+    background-position: center 45%;
+    background-size: 75%;
 }
 
 .header-logo{
@@ -46,7 +46,7 @@ body {
     font-size: 60px;
     font-weight: bold;
     line-height: 73px;
-    margin: 0px;
+    margin: 0px 0px 20px 0px;
 }
 
 .container-title p {
@@ -97,7 +97,7 @@ h2 {
 /* in order to make check square to match the visual effect, I plan to add a pseudo ::before and ::after to make up a square, and then, use position to change the pseudo elements' positon */
 .form-group:nth-of-type(6){
     position: relative;
-    margin-bottom: 18px;
+    margin-bottom: 5px;
 }
 
 [type="checkbox"] { 
@@ -205,7 +205,6 @@ h2 {
 
 .footer-form > .hours {
     width: 100%;
-
 }
 
 .footer-form > .city {
@@ -234,7 +233,11 @@ h2 {
 }
 
 @media (min-width: 768px ) {
-    /* for tablets */
+
+    .main-wrap {
+        background-position: center 40%;
+        background-size: 60%;
+    }
 
     /* give 3 columns in a row to reset the layout of footer-form */
     .footer-form {
@@ -262,18 +265,15 @@ h2 {
 }
 
 @media (min-width: 992px ){
-    /* for desktop */
 
     /* set the grid to 2x2 . */
     .main-wrap {
-        max-width: 1980px;
-        width: 85%;
-        margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 125px auto;
         grid-gap: 4rem;
-        height: 100%;
+        background-position: center 80%;
+        background-size: 40%;
     }
 
     .header {
@@ -283,15 +283,16 @@ h2 {
     .container-title {
         width:75%;
     }
+
     .container-title h1 {
     font-size: 80px;
     font-weight: bold;
     line-height: 97px;
-    margin: 0px;
+    margin: 0px 0px 20px 0px;
     }
 
     .main-form {
-        width: 100%;
+        width: 70%;
         margin-left: auto;
         border-radius: 26px;
         background-color: #ffffff;
