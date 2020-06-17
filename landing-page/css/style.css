@@ -1,24 +1,12 @@
-/* import font family from google */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* set the variables for using color easily and consistently*/
-:root {
-    --font-color:#333131;
-    --foot-btn:#ff8480;
-    --yellow:#fffd8c;
-    --blue:#57eead;
-    --white:#f7f7ff;
-    --shadow:rgba(51, 49, 49, 0.4); 
-}
-
+/* define font family and change the defalt content-box to border-box */
 * {
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
-    color: var(--font-color);
+    color: #333131;
 }
 
 body {
-    background-color: var(--white);
+    background-color: #f7f7ff;
 }
 
 /* I plan to set the layout to grid for outest layer layout, in order to make desktop size to 2 dementional layout */
@@ -59,7 +47,7 @@ body {
     width: 100%;
     border-radius: 26px;
     background-color: #ffffff;
-    box-shadow: 5px 10px 15px var(--shadow);
+    box-shadow: 5px 10px 15px rgba(51, 49, 49, 0.4);
     padding: 25px;
 }
 
@@ -116,7 +104,7 @@ h2 {
     width: 25px;
     height: 25px;
     border-radius: 5px;
-    border: 1px solid var(--font-color);
+    border: 1px solid #333131;
     position: absolute;
     top: 9px;
     left: 0;
@@ -127,7 +115,7 @@ h2 {
     content: "";
     width: 5px;
     height: 5px;
-    background-color: var(--font-color);
+    background-color: #333131;
     border-radius: 100%;
     border: none;
     position: absolute;
@@ -144,7 +132,7 @@ h2 {
     font-size: 24px;
     font-weight: bold;
     line-height: 55px;
-    background-color: var(--blue);
+    background-color: #57eead;
 }
 
 /* the bottom text styling */
@@ -154,12 +142,12 @@ h2 {
 }
 
 .main-form .color-text {
-    color: var(--foot-btn)
+    color: #ff8480;
 }
 
 /* footer section */
 .footer {
-    background-color: var(--yellow);
+    background-color: #fffd8c;
     padding: 10px;
     margin-top: 2rem ;
     border: none;   
@@ -216,8 +204,8 @@ h2 {
     grid-column: 1 / span 2;
     font-size: 24px;
     font-weight: bold;
-    background-color: var(--foot-btn);
-    color: var(--white);
+    background-color: #ff8480;
+    color: #f7f7ff;
 }
 
 /* arrange social media icons use flex, it will center the social-icon as well as rearrange the layout and in desktop size*/
@@ -296,7 +284,7 @@ h2 {
         margin-left: auto;
         border-radius: 26px;
         background-color: #ffffff;
-        box-shadow: 5px 10px 15px var(--shadow);
+        box-shadow: 5px 10px 15px rgba(51, 49, 49, 0.4);
         padding: 25px;
     }
     
