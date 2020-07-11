@@ -1,0 +1,1317 @@
+
+/* set the variables for using color easily and consistently */
+:root { 
+    --font-color:#3c3b3a;
+    --green:#26A682;
+    --white:#F2F2F2;
+    --shadow:rgba(18, 74, 58, 0.5); 
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: var(--font-color);
+    font-size: 16px;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    position: relative;
+    background-color: #ffffff;
+}
+
+/* set top-bar style */
+.top-bar-wrapper {
+    width: 100%;
+    background-color: var(--font-color);
+}
+
+.top-bar-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-logo {
+    width: 88px;
+    margin-top: 10px;
+}
+
+.top-logo img{
+    width: 100%;
+}
+
+.top-nav .nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-nav .nav a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+    visibility: visible;
+
+}
+
+.top-nav a::before {
+    content: attr(title) ;
+    display:block;
+    font-weight: 700;
+    visibility:hidden;
+    height: 0px;
+}
+
+.top-nav a:hover::before{
+    visibility: visible;
+}
+
+.top-nav a:hover{
+    visibility: hidden;
+}
+
+/* set a grid layout to this section */
+.arc-container {
+    background-image: url(../images/discover.svg);
+    background-repeat: no-repeat;
+    background-position: center 100%;
+    background-size: 60%;
+    width: 100%;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 180px;
+    grid-gap: 2rem;
+}
+
+.arc-get-started {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 2rem;
+}
+
+.arc-get-started .arc-text h1,
+.construction-text h1,
+.contact-text h1 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    margin-bottom: 1rem;
+    position: relative;
+    animation: title 1.5s ease-out;
+}
+
+@keyframes title{
+    from {left: -500px; opacity: 0;}
+    to {left: 0; opacity: 1;}
+}
+
+@keyframes para {
+    from {left: -1000px; opacity: 0;}
+    to {left: 0; opacity: 1;}
+}
+
+.arc-get-started .arc-text p,
+.construction-text p,
+.contact-text p {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 35px;
+    position: relative;
+    animation: para 1.5s ease-out;
+}
+
+/* set a grid layout to 4 icon combinations */
+.arc-get-started .arc-icons{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 1.5rem;
+}
+
+.arc-get-started .arc-icons .icon-wrap{
+    width: 100%;
+    text-align: center;   
+}
+
+.arc-get-started .arc-icons img{
+    width: 34.88px;
+    margin-bottom: 10px; 
+}
+
+.icon { 
+    animation-name: bowling;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.17,.67,.92,.17);
+}
+
+.bowling-ball { 
+    animation-delay: 0s;
+}
+
+.climbing{ 
+    animation-delay: 1s;
+}
+.fitness-center{ 
+    animation-delay: 2s;
+}
+.indoor-court { 
+    animation-delay: 0s;
+}
+
+@keyframes bowling {
+    0%, 100% { 
+        transform-origin: 50% 50%; 
+    }
+      
+    0% { 
+        transform: rotate(90deg); 
+    }
+      
+    100% { 
+        transform: rotate(-180deg); 
+    }
+    
+  }
+
+.arc-get-started .arc-icons p{
+    color: var(--green);
+    font-size: 16px;
+    font-weight: 200;
+}
+
+.arc-get-started .arc-btn .btn{
+    width: 100%;
+    background-color: var(--green);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 10px 10px var(--shadow);
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.scroll-down {
+    display: none;
+}
+
+/* set a flex layout to this section */
+.school-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.school-container .school-wrapper .school-image{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.school-container .school-wrapper .school-image img{
+    width: 100%;
+}
+
+/* set this part into flex layout, in order to move the "learn more" button to the end of its own row */
+.school-container .school-text{
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* combine the same code, reduce redundancy */
+.school-container .school-text h2,
+.entertainment-container .entertainment-text h2{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.green-subtitle{
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--green);
+    line-height: 45px;
+}
+
+.school-container .school-text p,
+.entertainment-container .entertainment-text p,
+.p {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 35px;
+}
+
+.school-container .school-text .btn,
+.entertainment-container .btn {
+    align-self: flex-end;
+    background-color: var(--green);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 10px 10px var(--shadow);
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin: 2rem 0;
+}
+
+/* define grid layout on this section */
+.president-container{
+    width: 100%;
+    background-color: var(--font-color);
+}
+
+.president-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 1rem;
+    padding: 2rem 0;
+}
+
+.president-container .president-image{
+    max-width: 175px;
+    max-height: 175px;
+    margin: 0 auto;
+}
+
+.president-container .president-image img{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 100%;
+    border: 5px solid var(--white);
+    margin-bottom: 1rem;
+}
+
+.president-container .president-name h4{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    color: var(--white);
+    text-align: center;
+}
+
+.president-container .president-text p{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 36px;
+    color: var(--white);
+}
+
+/* set a flex layout to this section and reverse the direction to switch the place of the image and text */
+
+.entertainment-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.entertainment-container .entertainment-image{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.entertainment-container .entertainment-image img{
+    width: 100%;
+}
+
+.entertainment-container .entertainment-text {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* footer section*/
+/* set footer layout to flex, in order to make the follow us in the center of the footer section */
+.footer {
+    width: 100%;
+    background-color: var(--font-color);
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p{
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 300;
+    color: var(--white);
+    text-align: center;
+}
+
+.footer-media {
+    display: flex;
+    align-items: center;
+}
+
+.footer-media a {
+    margin: 10px 5px;
+}
+
+.back-to-top {
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 45px;
+    right: 15px;
+}
+
+.back-to-top p {
+    font-size: 9px;
+    font-weight: 300;
+    color: var(--white);
+    text-align: center;
+}
+
+/* about page */
+
+/* about / set flex to construction section */
+.construction-wrapper {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.construction-text {
+    flex-basis: 100%;
+}
+
+.construction-image {
+    flex-basis: 100%;
+}
+
+/* about/ about image section */
+/* about / set width to the img wrapper */
+.about-image-wrapper,
+.services-image-wrapper {
+    width: 100%;
+}
+
+.about-image,
+.services-image {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: var(--green);
+}
+
+/* about / set a blend mode to multiply to match the visual effect */
+.about-image img,
+.services-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+}
+
+.about-image::after {
+    content: "About";
+    display: table;
+    font-size: 50px;
+    color: var(--white);
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* about / set grid layout to about text section */
+.about-text-wrapper {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.about-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-gap: 2rem;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 56px;
+}
+
+/* about / set services section as same effect as the about section, the only distinguish is the pseudo content */
+.services-image::after {
+    content: "Services";
+    display: table;
+    font-size: 50px;
+    color: var(--white);
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* about /  services bar section */
+
+.services-bar-wrapper,
+.services-fitness-wrapper {
+    width: 100%;
+}
+
+.services-bar-container,
+.services-fitness-container,
+.services-bowling-container,
+.services-climbing-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.s-bar-image,
+.s-bowling-image,
+.s-fitness-image,
+.s-climbing-image {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* about / services bowling section */
+.services-bowling-wrapper,
+.services-climbing-wrapper {
+    width: 100%;
+    background-color: var(--white);
+}
+
+/* about / subscribe section */
+
+.services-subscribe-wrapper {
+    width: 100%;
+    background-color: var(--font-color);
+    padding: 1rem 0;
+    
+}
+
+.s-subscribe-text {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.s-subscribe-text p{
+    font-size: 16px;
+    color: var(--white);
+    line-height: 35px;
+}
+
+.s-subscribe-text .btn {
+    background-color: var(--green);
+    border: none;
+    border-radius: 40px;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 30px;
+    margin: 10px 0;
+}
+
+/* about/ set grid to association section */
+
+.association-wrapper {
+    width: 80%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto auto auto auto;
+    grid-gap: 2rem;
+    grid-template-areas: 
+      "text"
+      "sa"
+      "ac"
+      "pcl"
+      "cibc";
+}
+
+.association-text {
+    width: 100%;
+    margin: 0 auto;
+    font-size: 56px;
+    line-height: 66px;
+    font-weight: 600;
+    grid-area: text;
+    text-align: center;
+}
+
+/*  about / set each logo a flex to center them in the grid */
+.association-sa-logo {
+    max-width: 100%;
+    grid-area: sa;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.sa-logo {
+    max-width: 301px;
+}
+
+.association-sa-logo img{
+    max-width: 100%;
+}
+
+.association-ac-logo {
+    max-width: 100%;
+    grid-area: ac;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.ac-logo {
+    max-width: 202px;
+}
+
+.association-ac-logo img{
+    max-width: 100%;  
+}
+
+.association-pcl-logo {
+    max-width: 100%;
+    grid-area: pcl;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.pcl-logo {
+    max-width: 220px; 
+}
+
+.association-pcl-logo img{
+    max-width: 100%;
+}
+
+.association-cibc-logo {
+    max-width: 100%;  
+    grid-area: cibc;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.cibc-logo {
+    max-width: 152px; 
+}
+
+.association-cibc-logo img{
+    max-width:100%; 
+}
+
+/* contact page */
+/* contact/ set contact form section to grid */
+.contact-wrapper {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.contact-container {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+}
+
+.contact-text h1{
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.contact-text p{
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 35px;
+}
+
+/* contact-form layout flex */
+.contact-form {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--green);
+    border-radius: 25px;
+}
+
+.contact-form-field {
+    width: 85%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-field .form-group {
+    width: 100%;
+    margin: 6px 0;
+}
+
+.contact-form-field legend{
+    font-size: 40px;
+    color: var(--white);
+    font-weight: 600;
+    line-height: 47px;
+}
+
+.contact-form-field label{
+    font-size: 18px;
+    color: var(--white);
+    font-weight: 300;
+    line-height: 21px;
+}
+
+.contact-form-field input{
+    width: 100%;
+    margin: 10px auto;
+    border: none; 
+    border-radius: 72px;
+}
+
+.contact-form-field input:focus,
+.contact-form-field textarea:focus {
+    outline: none;
+}
+
+.contact-form-field textarea{
+    width: 100%;
+    margin: 10px auto;
+    height: 100px;
+    border: none; 
+    border-radius: 10px;
+    resize: none;
+}
+
+.contact-form-field [placeholder] {
+    font-size: 16px;
+    color: rgba(60, 59, 58, .6);
+    padding: 10px 20px;
+}
+
+.contact-form-field .form-group:last-child {
+    width: 100%;
+    /* outline: 1px solid red; */
+    /* position: relative; */
+}
+
+.contact-form-field .btn {
+    width: 100%;
+    padding: 5px;
+    background-color: var(--font-color);
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0px 10px 10px var(--shadow);
+    color: var(--white);
+    font-size: 32px;
+    font-weight: 600;
+}
+
+
+
+
+/* contact / location section */
+.location-wrapper {
+    width: 100%;
+}
+
+.location-container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.location-text {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.location-text h2{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 47px;
+    margin-bottom: 14px;
+}
+
+.location-text h3{
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+    margin-bottom: 14px;
+}
+
+.location-text p{
+    font-size: 16px;
+    line-height: 35px;
+    margin-bottom: 14px;
+}
+
+
+/* media quaries */
+
+@media (min-width: 375px) {
+
+
+    .top-bar-container {
+        width: 80%;
+        margin: 0px auto;
+        flex-direction: row;
+    }
+
+    .top-logo {
+        margin-top: 0;
+    }
+
+    .top-logo img{
+        margin: 0;
+    }
+
+    .top-nav {
+        margin-left: auto;
+    }
+
+    .top-nav .nav{
+        margin-left: auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        /* border: 1px solid royalblue; */
+    }
+    
+    .top-nav .nav a {
+        margin-bottom: 0px;
+        margin-left: 2rem;
+    }
+
+    /* home min-width: 375px / change the layout to add a room for scroll-down */
+
+    .arc-container {
+        background-image: url(../images/discover.svg);
+        background-repeat: no-repeat;
+        background-position: center 85%;
+        background-size: 50%;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 380px;
+        grid-gap: 2rem;
+    }
+
+    /* home min-width: 375px / change the layout of the 4 icons */
+    .arc-get-started .arc-icons{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-gap: 1rem;
+    }
+
+    .arc-get-started .arc-btn {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .arc-get-started .arc-btn .btn{
+        font-size: 40px;
+        padding: 10px 50px;
+    }
+    
+    /* home min-width: 375px / visibility the scroll down botton */
+    .scroll-down {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: flex-end;
+        margin-bottom: 1rem;
+    }
+
+    .scroll-down p{
+        font-weight: 300;
+    }
+
+    .scroll-down img{
+        width: 30px;
+    }
+
+    .president-wrapper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 175px auto;
+    
+    }
+    
+    .president-container .president-image{
+        grid-column: 1 /2;
+        grid-row: 1 /2;
+    }
+    
+    .president-container .president-name {
+        grid-column: 1 /2;
+        grid-row: 2 /3;
+    }
+    
+    .president-container .president-text {
+        grid-column: 2 /3;
+        grid-row: 1 /3;
+    }
+
+    /* about page min-width: 375px /*/
+    /* about min-width: 375px /  services bar section */
+
+    .services-bar-container,
+    .services-fitness-container {
+        width: 80%;
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 1rem;
+    }
+
+    .s-bar-image,
+    .s-bowling-image,
+    .s-fitness-image,
+    .s-climbing-image {
+        display: block;
+    }
+
+    .services-bowling-container,
+    .services-climbing-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    /* about min-width: 375px  / change subscribe section layout */
+    
+    .s-subscribe-text {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .s-subscribe-text .btn {
+        margin-left: auto;
+    }
+
+    /* contact min-width: 375px /contact form */
+
+    .contact-form-field legend{
+        font-size: 70px;
+        line-height: 95px;
+    }
+
+    /* contact min-width: 375px / rearrange the position of form button */
+ 
+    .contact-form-field .form-group:last-child {
+        margin: 20px 0;
+        display: flex;
+    }
+
+    .contact-form-field .btn {
+        width: auto;
+        padding: 5px 30px;
+        margin-left: auto;
+    }
+    
+}
+
+@media (min-width: 768px) {
+
+    /* home min-width: 768px / change the width of the content based on the width of xd file */
+    .top-bar-container {
+        width: 85%;
+    }
+
+    /* change the layout of discover your ARC */
+
+    .arc-container {
+        width: 85%;
+        background-position: 100% 10%;
+        background-size: 50%;
+        margin: 2rem auto;
+        grid-template-columns: 1fr 1.8fr;
+        grid-template-rows: auto auto;
+        grid-gap: 2rem;
+    }
+  
+    .arc-get-started {
+        width: 80%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 60px;
+        grid-gap: 2rem;
+    }
+    
+    .arc-get-started {
+        width: 100%;
+        margin: 4rem auto;
+    }
+    
+    .arc-get-started .arc-text h1 {
+        width: 100%;
+        font-size: 72px;
+        line-height: 85px;
+        margin-bottom: 3rem;
+    }
+    
+    
+    .arc-get-started .arc-text p {
+        font-size: 24px;
+        line-height: 35px;
+    }
+    
+    .arc-get-started .arc-btn {
+        margin: 0;
+    }
+    
+    .arc-get-started .arc-btn .btn{
+        width: auto;
+        font-size: 32px;
+        line-height: 47px;
+        padding: 10px 50px;
+    }
+
+    .scroll-down {
+        width: 100%;
+        grid-column: 1/3;
+    }
+
+    .scroll-down img{
+        width: 50px;
+    }
+
+    /* home min-width: 768px /set school and entertainment section, I combine their code into one part as they can use same styling*/
+    .school-container,
+    .entertainment-container {
+        width: 100%;
+        padding: 3rem 0;
+        background-color: var(--white);
+    }
+
+    .school-wrapper,
+    .entertainment-wrapper {
+        width: 85%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
+    }
+    
+    .school-container .school-wrapper .school-image{
+        max-width:100%;
+        margin-bottom: 0;
+    }
+
+    .school-container .school-wrapper .school-image img{
+        max-width:100%;
+        object-fit: cover;
+    }
+
+    .school-container .school-text{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .school-container .school-text h2,
+    .entertainment-container .entertainment-text h2{
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 56px;
+    }
+
+    .green-subtitle{
+        line-height: 50px;
+    }
+
+    .school-container .school-text p,
+    .entertainment-container .entertainment-text p{
+        margin-bottom: 1rem;
+    }
+
+    .school-container .school-text .btn,
+    .entertainment-container .btn {
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
+    /* home min-width: 768px / rearrange the layout of president section */
+
+     .president-wrapper {
+        width: 85%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-rows: auto;
+    
+    }
+    
+    
+    .president-container .president-image{
+        grid-column: 1 /2;
+        grid-row: 1 /1;
+        align-self: center;
+        justify-self: start;    
+    }
+
+    
+    .president-container .president-name {
+        grid-column: 2 /3;
+        grid-row: 1 /1;
+        align-self: center;
+        justify-self: start;
+    }
+
+    
+    .president-container .president-text {
+        grid-column: 3 /4;
+        grid-row: 1 /1;
+        align-self: center;
+        justify-self: end;
+    }
+
+    .president-container .president-text p{
+        width: 100%;
+    }
+
+    /* about page min-width: 768px */
+
+    /* about min-width: 768px / rearrange the construction section */
+    .construction-wrapper {
+        width: 85%;
+        margin: 4rem auto;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .construction-text h1{
+        font-size: 72px;
+        line-height: 85px;
+    }
+    
+
+    /* about min-width: 768px / rearrange about text */
+
+    .about-text-wrapper {
+        width: 85%;
+        margin: 5rem auto;
+    }
+    
+    .about-text {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    
+    .title {
+        font-size: 40px;
+        line-height: 60px;
+    }
+    
+
+    /* about min-width: 768px /  rearrange services bar section */
+
+    .services-bar-container,
+    .services-fitness-container,
+    .services-bowling-container,
+    .services-climbing-container {
+        width: 85%;
+        padding: 3rem 0;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    /* about min-width: 768px / change subscribe section layout */
+    .services-subscribe-wrapper {
+        padding: 10px 0;
+        margin: 0;
+    }
+    
+    .s-subscribe-text {
+        width: 85%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .s-subscribe-text p {
+        font-size: 25px;
+    }
+    
+    .s-subscribe-text .btn {
+        margin-left: 10px;
+    }
+
+    /* about min-width: 768px / change the layout of association section */
+
+    .association-wrapper {
+        width: 85%;
+        margin: 4rem auto;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr auto;
+        grid-gap: 5rem;
+        grid-template-areas: 
+          "text text text text"
+          "sa ac pcl cibc";
+    }
+
+    .association-text {
+        width: 50%;
+        font-size: 72px;
+        line-height: 85px;
+    }
+
+    .association-sa-logo {
+        justify-content: flex-start;
+    }
+
+    .sa-logo {
+        max-width: 435px;
+    }
+
+    .association-cibc-logo {
+        justify-content: flex-end;  
+    }
+
+    .association-cibc-logo img{
+        max-width: 100%;
+    }
+
+    /*  contact min-width: 768px / rearrange form section */
+    .contact-wrapper {
+        width: 100%;
+        margin: 120px 0;
+    }
+    
+    .contact-container {
+        width: 85%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    .contact-text {
+        width: 100%;
+        height: 801px;
+    }
+    
+    .contact-text h1{
+        width: 80%;
+        font-size: 72px;
+        line-height: 84px;
+        margin-bottom: 1rem;
+    }
+    
+    .contact-text p{
+        font-size: 24px;
+        margin-bottom: 2rem;
+    }
+
+    .contact-text .image{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .contact-text .image img{
+        max-width: 100%;
+        /* vertical-align: middle; */
+        padding: 0 5rem;
+    }
+    
+   /* contact min-width: 768px / contact-form layout flex */
+    .contact-form {
+        max-width: 628px;
+        margin: 0 auto;
+    }
+
+    .contact-form-field h1{
+        font-size: 24px;
+    }
+
+    .contact-form-field input {
+        height: 50px;
+    }
+
+    .contact-form-field textarea {
+        height: 148px;
+    }
+
+    .contact-form-field legend{
+        font-size: 72px;
+    }
+
+    .contact-form-field .btn {
+        font-size: 40px;
+        line-height: 65px;
+    }
+
+    /* contact min-width: 768px / rearrange location section */
+
+    .location-wrapper {
+        width: 100%;
+        margin: 5rem auto;
+    }
+    
+    .location-container {
+        width: 85%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .location-text {
+        flex-basis: 48%;
+        margin: 0;
+    }
+    
+    .location-text h2{
+        font-size: 72px;
+        line-height: 85px;
+    }
+    
+    .location-text h3{
+        font-size: 40px;
+        line-height: 47px;
+    }
+    
+    .location-map {
+        flex-basis: 48%;
+    }
+
+
+
+}
