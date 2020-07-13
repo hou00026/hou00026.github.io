@@ -402,11 +402,12 @@ body {
 .contact-container .image {
     flex-basis: 100%;
     position: relative;
-    animation: illustration 1.5s ease-out;
+    animation: illustration 1s ease-out;
+    z-index: 99;
 }
 
 @keyframes illustration {
-    from{right: -1000px; opacity: 0;}
+    from{right: -100px; opacity: 0;}
     to{right: 0px; opacity: 1;}
 }
 
@@ -1235,6 +1236,8 @@ img {
     .contact-form {
         max-width: 628px;
         margin: 0 auto;
+        position: relative;
+        z-index: 999;
     }
 
     .contact-form-field h1{
