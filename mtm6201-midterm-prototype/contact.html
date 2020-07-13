@@ -44,25 +44,25 @@
                             <img src="./images/contact-img.svg" alt="contact-illustration">
                         </div>     
                 </div>
-                <form class="contact-form" action="" post="">
+                <form class="contact-form">
                     <fieldset class="contact-form-field">
                         <legend>Contact us.</legend>
                         <div class="form-group">
                             <label for="full-name">Full Name</label><br>
-                            <input type="text" class="full-name" id="full-name" placeholder="Full Name">
+                            <input type="text" name="full-name" class="full-name" id="full-name" placeholder="Full Name">
                         </div>
                         <div class="form-group">
                             <label for="student-number">Student Number</label><br>
-                            <input type="text" class="student-number" id="student-number"
+                            <input type="text" name="student-number" class="student-number" id="student-number"
                                 placeholder="Student Number">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label><br>
-                            <input type="email" class="email" id="email" placeholder="Email">
+                            <input type="email" name="email" class="email" id="email" placeholder="Email">
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label><br>
-                            <textarea type="text" class="message" id="message" placeholder="Message"></textarea>
+                            <textarea class="message" name="message" id="message" placeholder="Message"></textarea>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn">Submit
@@ -89,6 +89,7 @@
                          srcset="./images/map-375-250.jpg 375w,
                                  ./images/map-768-500.jpg 768w,
                                  ./images/map-812-500.jpg 812w"
+                        sizes="(min-width: 768px) 50vw, 100vw"
                          alt="location-map">
                 </div>
             </div>
