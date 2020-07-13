@@ -61,7 +61,6 @@ body {
     text-align: center;
     margin-bottom: 20px;
     visibility: visible;
-
 }
 
 .top-nav a::before {
@@ -320,7 +319,6 @@ body {
 }
 
 /* set a flex layout to this section and reverse the direction to switch the place of the image and text */
-
 .entertainment-wrapper {
     display: flex;
     flex-direction: column-reverse;
@@ -343,7 +341,7 @@ body {
 }
 
 /* footer section*/
-/* set footer layout to flex, in order to make the follow us in the center of the footer section */
+/* set footer layout to flex, in order to make the "follow us" in the center of the footer section */
 .footer {
     width: 100%;
     background-color: var(--font-color);
@@ -388,7 +386,6 @@ body {
 }
 
 /* about page */
-
 /* about / set flex to construction section */
 .construction-wrapper {
     width: 80%;
@@ -401,8 +398,16 @@ body {
     flex-basis: 100%;
 }
 
-.construction-image {
+.construction-image,
+.contact-container .image {
     flex-basis: 100%;
+    position: relative;
+    animation: illustration 1.5s ease-out;
+}
+
+@keyframes illustration {
+    from{right: -1000px; opacity: 0;}
+    to{right: 0px; opacity: 1;}
 }
 
 /* about/ about image section */
@@ -724,8 +729,6 @@ img {
 
 .contact-form-field .form-group:last-child {
     width: 100%;
-    /* outline: 1px solid red; */
-    /* position: relative; */
 }
 
 .contact-form-field .btn {
@@ -739,9 +742,6 @@ img {
     font-size: 32px;
     font-weight: 600;
 }
-
-
-
 
 /* contact / location section */
 .location-wrapper {
@@ -782,10 +782,9 @@ img {
 
 
 /* media quaries */
-
 @media (min-width: 375px) {
 
-
+    /* home page */
     .top-bar-container {
         width: 80%;
         margin: 0px auto;
@@ -809,7 +808,6 @@ img {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        /* border: 1px solid royalblue; */
     }
     
     .top-nav .nav a {
@@ -818,7 +816,6 @@ img {
     }
 
     /* home min-width: 375px / change the layout to add a room for scroll-down */
-
     .arc-container {
         background-image: url(../images/discover.svg);
         background-repeat: no-repeat;
@@ -871,7 +868,6 @@ img {
     .president-wrapper {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 175px auto;
-    
     }
     
     .president-container .president-image{
@@ -891,7 +887,6 @@ img {
 
     /* about page min-width: 375px /*/
     /* about min-width: 375px /  services bar section */
-
     .services-bar-container,
     .services-fitness-container {
         width: 80%;
@@ -916,7 +911,6 @@ img {
     }
 
     /* about min-width: 375px  / change subscribe section layout */
-    
     .s-subscribe-text {
         flex-direction: row;
         align-items: center;
@@ -927,14 +921,12 @@ img {
     }
 
     /* contact min-width: 375px /contact form */
-
     .contact-form-field legend{
         font-size: 70px;
         line-height: 95px;
     }
 
     /* contact min-width: 375px / rearrange the position of form button */
- 
     .contact-form-field .form-group:last-child {
         margin: 20px 0;
         display: flex;
@@ -955,11 +947,10 @@ img {
         width: 85%;
     }
 
-    /* change the layout of discover your ARC */
-
+    /* home min-width: 768px / change the layout of discover your ARC */
     .arc-container {
         width: 85%;
-        background-position: 100% 10%;
+        background-position: 90% 40%;
         background-size: 50%;
         margin: 2rem auto;
         grid-template-columns: 1fr 1.8fr;
@@ -987,7 +978,6 @@ img {
         line-height: 85px;
         margin-bottom: 3rem;
     }
-    
     
     .arc-get-started .arc-text p {
         font-size: 24px;
@@ -1070,16 +1060,13 @@ img {
     }
 
     /* home min-width: 768px / rearrange the layout of president section */
-
-     .president-wrapper {
+    .president-wrapper {
         width: 85%;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr 1fr 2fr;
         grid-template-rows: auto;
-    
     }
-    
     
     .president-container .president-image{
         grid-column: 1 /2;
@@ -1087,15 +1074,13 @@ img {
         align-self: center;
         justify-self: start;    
     }
-
-    
+ 
     .president-container .president-name {
         grid-column: 2 /3;
         grid-row: 1 /1;
         align-self: center;
         justify-self: start;
     }
-
     
     .president-container .president-text {
         grid-column: 3 /4;
@@ -1109,7 +1094,6 @@ img {
     }
 
     /* about page min-width: 768px */
-
     /* about min-width: 768px / rearrange the construction section */
     .construction-wrapper {
         width: 85%;
@@ -1125,7 +1109,6 @@ img {
     
 
     /* about min-width: 768px / rearrange about text */
-
     .about-text-wrapper {
         width: 85%;
         margin: 5rem auto;
@@ -1141,9 +1124,7 @@ img {
         line-height: 60px;
     }
     
-
     /* about min-width: 768px /  rearrange services bar section */
-
     .services-bar-container,
     .services-fitness-container,
     .services-bowling-container,
@@ -1176,7 +1157,6 @@ img {
     }
 
     /* about min-width: 768px / change the layout of association section */
-
     .association-wrapper {
         width: 85%;
         margin: 4rem auto;
@@ -1248,7 +1228,6 @@ img {
 
     .contact-text .image img{
         max-width: 100%;
-        /* vertical-align: middle; */
         padding: 0 5rem;
     }
     
@@ -1280,7 +1259,6 @@ img {
     }
 
     /* contact min-width: 768px / rearrange location section */
-
     .location-wrapper {
         width: 100%;
         margin: 5rem auto;
@@ -1311,7 +1289,5 @@ img {
     .location-map {
         flex-basis: 48%;
     }
-
-
 
 }
