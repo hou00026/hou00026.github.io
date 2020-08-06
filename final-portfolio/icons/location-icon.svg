@@ -1,0 +1,11 @@
+<svg id="Component_16_6" data-name="Component 16 – 6" xmlns="http://www.w3.org/2000/svg" width="13.127" height="18.796" viewBox="0 0 13.127 18.796">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d58c7d;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Path_213" data-name="Path 213" class="cls-1" d="M493.286,450.558a6.522,6.522,0,0,1,6.562,6.562c-.047,2.953-4.733,9.047-6.234,12.235-1.688-3.608-6.891-8.765-6.891-12.235a6.494,6.494,0,0,1,6.564-6.562m0,4.125a1.922,1.922,0,0,0,0,3.844,1.922,1.922,0,0,0,0-3.844" transform="translate(-486.722 -450.558)"/>
+</svg>
