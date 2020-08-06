@@ -76,22 +76,23 @@ body {
     left: -50px;
     visibility: hidden;
     transition: left .3s ease-in;
-    /* display: none; */
 }
 
 .nav-item a:hover::after {
     left: 0px;
     transition: left .3s ease-in;
     visibility: visible;
-    /* display: block; */
 }
 
 .nav-item a:hover{
     color: var(--secondary);  
 }
 
-/* main*/
+.nav-item .active {
+    color: var(--secondary);
+}
 
+/* main*/
 /* intro-section */
 .intro-section,
 .experience-section,
@@ -172,7 +173,6 @@ body {
     margin-top: 2rem;
     position: relative;
     animation: intro-photo 1s ease-out;
-    /* border: 1px solid red; */
 }
 
 @keyframes intro-photo{
@@ -213,8 +213,7 @@ body {
     text-transform: uppercase;
     color: #eddfdd;
     font-size: 12px;
-    font-weight: 400;
-   
+    font-weight: 400; 
 }
 
 /* scroll-down */
@@ -227,8 +226,6 @@ body {
     margin-top: 10px;
     color: var(--font-color);
 }
-
-
 
 /* experience-section */
 .section-title {
@@ -283,12 +280,10 @@ body {
     display: none;
 }
 
-
 .experience-nav-item {
     padding: 0 0; 
     width: 100%;
     color: var(--font-color);
-    /* border: 1px solid red;  */
     text-align: right;
     line-height: 2rem;
 }
@@ -297,7 +292,6 @@ body {
     position: relative;
     color: var(--font-color);
     font-size: 14px;
-    /* border-right: 1px solid red; */
     padding: 3rem 2rem 3rem 0;
 }
 
@@ -318,25 +312,6 @@ body {
 
 .experience-nav-item a:hover{
     color: var(--secondary);  
-}
-
-.position-content-container {
-    position: relative;
-}
-
-.position-content-container {
-    background-color: rgba(97, 113, 157, 0.2);
-    
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(53, 48, 85, 0.16);
-}
-
-#collapseExample-2 {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    border: 1px solid re;
 }
 
 /* education section */
@@ -377,8 +352,7 @@ body {
     align-items: center;
 }
 
-
-/* set social media icon each a animation */
+/* set social media icon each a animation. A box contains 2 different status icon. set the box to the same size as each icon, use position to move the 2 icon horizontally placed, the overflow image set to hidden. when hover the box, the hidden image move certain space to match the other status image */
 .social-media-item-1,
 .social-media-item-2,
 .social-media-item-3 {
@@ -452,8 +426,7 @@ body {
     background-image: url(../icons/facebook-hover.svg); 
 }
 
-
-/* set grid to footer-content to make each item's arrangement flexibly*/
+/* set layout to disply grid to footer-content to make each item's arrangement flexible*/
 .footer {
     margin-top: 3rem;
 }
@@ -480,15 +453,29 @@ body {
     font-size: 12px;
 }
 
+.back-to-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    bottom: 60px;
+    right: 15px;
+}
+
+.back-to-top p {
+    font-size: 9px;
+    font-weight: 500;
+    color: var(--secondary);
+}
+
 /* works page */
 .work-1{
     margin-top: 5rem;
-    /* border: 1px solid red; */
 }
 
+/* style each part a slightly animation  */
 .work-content h3 {
     position: relative;
-    /* border: 1px solid red; */
     animation: work-h3 1s ease;
 }
 
@@ -512,7 +499,6 @@ body {
 .work-text{
     position: relative;
     margin-top: 2rem;
-    /* border: 1px solid rgb(116, 74, 74); */
     animation: work-text 1s ease;
 }
 
@@ -521,7 +507,7 @@ body {
     100%{left: 0px; opacity: 1;}
 }
 
-
+/* utilize scale to make a slight hover status to distinguish the different status */
 .work-picture {
     transform: scale(1);
     transition: .3s ease;   
@@ -593,6 +579,7 @@ body {
     margin-top: 5rem;
 }
 
+/* almostly like the home page styling */
 .contact-title {
     position: relative;
     color: var(--secondary);
@@ -603,7 +590,6 @@ body {
     0%  {left: -50px; opacity: 0;}
     100%{left: 0px; opacity: 1;}
 }
-
 
 .contact-title h1{
     font-size: 1rem;
@@ -653,7 +639,6 @@ body {
     display: none;
 }
 
-
 /* work-detail page */
 /* section-1 */
 .section-1 {
@@ -676,7 +661,7 @@ body {
     font-weight: 600;
 }
 
-/* section-2 */
+/* section - each section. conbine the same style to reduce the redundancy*/
 .section-2,
 .section-3,
 .section-4,
@@ -726,7 +711,6 @@ body {
 
 .bakery-thumnail {
     width: 100%;
-    /* border: 1px solid red;  */
 }
 
 .bakery-thumnail img,
@@ -740,9 +724,9 @@ body {
 .avatar-thumnail:hover img{
     transform: scale(1.1);
     transition: .5s ease-in-out;
-
 }
 
+/* use pseudo elements to give a hover status color overlap the image */
 .bakery-thumnail:hover::before,
 .avatar-thumnail:hover::before {
     content: "";
@@ -755,6 +739,8 @@ body {
     z-index: 999;
 } 
 
+
+/* add a sentence when hover the image. the theory is add a pseodo and use position to move it to the center center. */
 .bakery-thumnail::after,
 .avatar-thumnail::after {
     content: "Bakery Website";
@@ -780,13 +766,9 @@ body {
     content: "Avatar Design";
 }
 
-
 .avatar-thumnail:hover::after {
     content: "Avatar Design";
 }
-
-
-
 
 
 /* media quaries min-width: 575px */
