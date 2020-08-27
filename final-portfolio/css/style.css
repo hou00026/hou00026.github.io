@@ -100,6 +100,10 @@ body {
     margin-top: 5rem;
 }
 
+.highlight {
+    color: var(--secondary);
+}
+
 /* intro-left-text */
 .intro-title {
     position: relative;
@@ -143,10 +147,11 @@ body {
     position: relative;
     margin-top: 2rem;
     color: var(--font-color);
-    line-height: 32px;  
+    line-height: 40px;  
 }
 
 .intro-text {
+    width: 80%;
     animation: intro-text 1s ease-out;
     animation-delay: .3s;
 }
@@ -231,15 +236,14 @@ body {
 .section-title {
     font-size: 45px;
     line-height: 60px;
-    margin-top: 2rem;
+    margin: 2rem 0 2rem 0;
     color: var(--font-color);
     font-weight: 400;
 }
 
 .section-text {
     font-size: 16px;
-    margin-top: 1rem;
-    line-height: 28px;
+    line-height: 32px;
     color: var(--font-color);
     font-weight: 400;
 }
@@ -319,6 +323,9 @@ body {
 }
 
 .education-school .education-program {
+    display: block;
+    text-decoration: none;
+    color: var(--font-color);
     font-weight: 500;
     margin-top: 2rem;
 }
@@ -486,6 +493,7 @@ body {
 .work-text{
     position: relative;
     margin-top: 2rem;
+    line-height: 32px;
     animation: work-text 1s ease;
 }
 
