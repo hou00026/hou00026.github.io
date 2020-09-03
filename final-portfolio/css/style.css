@@ -1,13 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* set the variables for consistent*/
-:root {
+/*  I plan to define two color variables to create two theme. @blue theme*/
+/* :root {
     --primary-color:#32426C;
     --secondary:#D58C7D;
     --font-color:#909bba;
     --gray:#F6F6F8;
     --white:#ffffff;
     --shadow:rgba(126, 137, 167, 0.2); 
+    --shadow-2:rgba(224, 129, 122, 0.2); 
+} */
+
+/*  @white theme */
+:root {
+    --font-color:#32426C;
+    --text-color:#909bba;
+    --secondary:#D58C7D; 
+    --primary-color:#F6F6F8;
+    --white:#ffffff;
+    --shadow:rgba(125, 146, 202, 0.119); 
     --shadow-2:rgba(224, 129, 122, 0.2); 
 }
 
@@ -31,7 +42,7 @@ body {
 .navbar,
 .main,
 .footer {
-    width: 80%;
+    width: 90%;
     margin: 0 auto; 
 }
 
@@ -74,15 +85,17 @@ body {
     position: absolute;
     top: 10px;
     left: -50px;
-    visibility: hidden;
-    transition: left .3s ease-in;
+    opacity: 0;
 }
 
 .nav-item a:hover::after {
     left: 0px;
-    transition: left .3s ease-in;
-    visibility: visible;
+    transition: left .3s ease-in-out;
+    opacity: 1;
 }
+
+
+
 
 .nav-item a:hover{
     color: var(--secondary);  
@@ -97,6 +110,8 @@ body {
 .intro-section,
 .experience-section,
 .education-section {
+    max-width: 1080px;
+    margin: 0 auto;
     margin-top: 5rem;
 }
 
@@ -333,7 +348,7 @@ body {
 /* footer */
 .footer-wrapper {
     width: 100%;
-    border-top: 2px solid var(--font-color);
+    border-top: 1px solid var(--text-color);
     padding: 2rem 0;
     margin-top: 5rem;
 }
@@ -444,7 +459,10 @@ body {
 
 .footer-credit {
     grid-area: credit;
-    font-size: 12px;
+    font-size: 10px;
+    letter-spacing: .3px;
+    font-weight: 400;
+    color: var(--font-color);
 }
 
 .back-to-top {
@@ -452,7 +470,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: fixed;
-    bottom: 60px;
+    bottom: 250px;
     right: 15px;
 }
 
@@ -463,6 +481,10 @@ body {
 }
 
 /* works page */
+.main {
+    max-width: 1080px;
+    margin: 0 auto;
+}
 .work-1{
     margin-top: 5rem;
 }
@@ -492,7 +514,7 @@ body {
 
 .work-text{
     position: relative;
-    margin-top: 2rem;
+    margin-top: 1rem;
     line-height: 32px;
     animation: work-text 1s ease;
 }
@@ -584,7 +606,7 @@ embed {
     margin-top: 5rem;
 }
 
-/* almostly like the home page styling */
+/* practically like the home page styling */
 .contact-title {
     position: relative;
     color: var(--secondary);
@@ -646,8 +668,15 @@ embed {
 
 /* work-detail page */
 /* section-1 */
+
+.shadow-image {
+    /* border: 1px solid red; */
+    box-shadow: 5px 10px 10px var(--shadow)
+    
+}
 .section-1 {
     margin-top: 5rem;
+    max-width: 1080px;
 }
 
 .work-content .content-part {
@@ -672,6 +701,7 @@ embed {
 .section-4,
 .section-5,
 .section-other-works {
+    max-width: 1080px;
     margin-top: 10rem;
     text-align: center;
 }
@@ -695,9 +725,12 @@ embed {
     margin: 2rem auto;
 }
 
-/* detail page - other works section */
+/* detail page - other projects section */
 .section-other-works h4 {
-    color: var(--secondary);
+    display: inline-block;
+    color: var(--font-color);
+    line-height: 5rem;
+    border-top: 1px solid var(--secondary);
 }
 
 .other-works-wrapper {
@@ -708,7 +741,7 @@ embed {
 }
 
 .other-works-bakery {
-    border-radius: 40px;
+    border-radius: 25px;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -719,49 +752,58 @@ embed {
 }
 
 .bakery-thumnail img,
-.avatar-thumnail img {
+.avatar-thumnail img,
+.bonsai-thumnail img,
+.fund-logo-thumnail img{
     max-width:100%;
     transform: scale(1);
     transition: .5s ease-in-out; 
 }
 
 .bakery-thumnail:hover img,
-.avatar-thumnail:hover img{
-    transform: scale(1.1);
-    transition: .5s ease-in-out;
+.avatar-thumnail:hover img,
+.bonsai-thumnail:hover img,
+.fund-logo-thumnail:hover img{
+    transform: scale(1.06);
+    transition: .3s ease-in-out;
 }
 
 /* use pseudo elements to give a hover status color overlap the image */
 .bakery-thumnail:hover::before,
-.avatar-thumnail:hover::before {
+.avatar-thumnail:hover::before,
+.bonsai-thumnail:hover::before,
+.fund-logo-thumnail:hover::before {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: rgba(12, 12, 12, 0.427);
+    background-color: rgba(12, 12, 12, 0.7);
     position: absolute;
     top: 0px;
     left: 0px;
-    z-index: 999;
+    z-index: 99;
 } 
 
-
-/* add a sentence when hover the image. the theory is add a pseodo and use position to move it to the center center. */
+/* add the project name when hover the image. The method is add a pseodo and use position to move it to center center. */
 .bakery-thumnail::after,
-.avatar-thumnail::after {
+.avatar-thumnail::after,
+.bonsai-thumnail::after,
+.fund-logo-thumnail::after {
     content: "Bakery Website";
-    font-size: 2rem;
+    font-size: 1.3rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 999;
-    color: var(--gray);
+    z-index: 9999;
+    color: var(--primary-color);
     opacity: 0;
     transition: .3s ease-in;
 }
 
 .bakery-thumnail:hover::after,
-.avatar-thumnail:hover::after {
+.avatar-thumnail:hover::after,
+.bonsai-thumnail:hover::after,
+.fund-logo-thumnail:hover::after {
     opacity: 1;
     transition: .3s ease-in;
 }
@@ -770,8 +812,16 @@ embed {
     content: "Avatar Design";
 }
 
+.bonsai-thumnail::after {
+    content: "Website Redesign";
+}
+
 .avatar-thumnail:hover::after {
     content: "Avatar Design";
+}
+
+.fund-logo-thumnail::after {
+    content: "Logo Desgin";
 }
 
 
