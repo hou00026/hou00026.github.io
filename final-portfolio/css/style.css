@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/*  I plan to define two color variables to create two theme. @blue theme*/
+/*  I plan to define two color variables to create two theme. @darker theme*/
 /* :root {
     --primary-color:#32426C;
     --secondary:#D58C7D;
@@ -14,7 +14,7 @@
 /*  @white theme */
 :root {
     --font-color:#32426C;
-    --text-color:#909bba;
+    --text-color:#647194;
     --secondary:#D58C7D; 
     --primary-color:#F6F6F8;
     --white:#ffffff;
@@ -37,6 +37,7 @@ body {
 /* top-bar */
 .top-bar {
     margin-top: 2rem;
+    margin-bottom: 5rem;
 }
 
 .navbar,
@@ -70,8 +71,10 @@ body {
 .nav-item a{
     position: relative;
     text-decoration: none;
-    color: var(--font-color);
-    font-size: 1rem;
+    color: var(--text-color);
+    font-size: .9rem;
+    font-weight: 300;
+    text-transform: uppercase;
     animation: nav .6s ease-in-out;
 }
 
@@ -144,14 +147,14 @@ body {
 }
 
 .intro-title h1{
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: .9rem;
+    font-weight: 300;
     line-height: 32px;
 }
 
 .intro-title h2{
     font-weight: 400;
-    line-height: 60px;
+    line-height: 68px;
     margin-top: 2rem;
     color: var(--secondary);
     font-weight: 400;
@@ -162,7 +165,8 @@ body {
     position: relative;
     margin-top: 2rem;
     color: var(--font-color);
-    line-height: 40px;  
+    font-size: .9rem;
+    line-height: 36px;  
 }
 
 .intro-text {
@@ -221,8 +225,17 @@ body {
     border-radius: 40px;
 }
 
+.download-resume {
+    background-color: #dcdcdc9a;
+}
+
+
 .btn:hover {
     background-color: #d58c7d9a;
+}
+
+.download-resume:hover{
+    background-color: #cec3c39a;
 }
 
 .btn img {
@@ -230,10 +243,14 @@ body {
 }
 
 .btn span{
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     color: #eddfdd;
     font-size: 12px;
-    font-weight: 400; 
+    font-weight: 500; 
+}
+
+.download-resume span{
+    color: var(--font-color);
 }
 
 /* scroll-down */
@@ -243,23 +260,24 @@ body {
 }
 
 .scroll-down {
+    font-size: 12px;
     margin-top: 10px;
     color: var(--font-color);
 }
 
 /* experience-section */
 .section-title {
-    font-size: 45px;
+    font-size: 2rem;
     line-height: 60px;
     margin: 2rem 0 2rem 0;
     color: var(--font-color);
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .section-text {
-    font-size: 16px;
+    font-size: .9rem;
     line-height: 32px;
-    color: var(--font-color);
+    color: var(--text-color);
     font-weight: 400;
 }
 
@@ -288,15 +306,14 @@ body {
 .experience-nav-item {
     padding: 0 0; 
     width: 100%;
-    color: var(--font-color);
     text-align: right;
     line-height: 2rem;
 }
 
 .experience-nav-item a{
     position: relative;
-    color: var(--font-color);
-    font-size: 14px;
+    color: var(--text-color);
+    font-size: .7rem;
     padding: 3rem 2rem 3rem 0;
 }
 
@@ -320,6 +337,17 @@ body {
     color: var(--secondary);  
 }
 
+.position-content-container h4 {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 36px;
+}
+
+.position-content-container .position,
+.position-content-container .location {
+    font-size: 12px;
+}
+
 /* education section */
 .education-school {
     margin-top: 2rem;
@@ -341,6 +369,7 @@ body {
     display: block;
     text-decoration: none;
     color: var(--font-color);
+    font-size: .9rem;
     font-weight: 500;
     margin-top: 2rem;
 }
@@ -462,7 +491,7 @@ body {
     font-size: 10px;
     letter-spacing: .3px;
     font-weight: 400;
-    color: var(--font-color);
+    color: var(--text-color);
 }
 
 .back-to-top {
@@ -470,7 +499,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: fixed;
-    bottom: 250px;
+    bottom: 100px;
     right: 15px;
 }
 
@@ -485,12 +514,19 @@ body {
     max-width: 1080px;
     margin: 0 auto;
 }
+
+.work {
+    text-align: center;
+}
+
 .work-1{
     margin-top: 5rem;
 }
 
+
 /* style each part a slightly animation  */
-.work-content h3 {
+h3 {
+    font-size: 1.2rem;
     position: relative;
     animation: work-h3 1s ease;
 }
@@ -515,6 +551,7 @@ body {
 .work-text{
     position: relative;
     margin-top: 1rem;
+    font-size: .9rem;
     line-height: 32px;
     animation: work-text 1s ease;
 }
@@ -604,6 +641,7 @@ embed {
 /* contact page */
 .contact-section{
     margin-top: 5rem;
+    text-align: center;
 }
 
 /* practically like the home page styling */
@@ -618,11 +656,6 @@ embed {
     100%{left: 0px; opacity: 1;}
 }
 
-.contact-title h1{
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 32px;
-}
 
 .contact-title h2{
     font-weight: 400;
@@ -635,6 +668,7 @@ embed {
     position: relative;
     margin-top: 2rem;
     color: var(--font-color);
+    font-size: .9rem;
     line-height: 32px;  
 }
 
@@ -677,6 +711,7 @@ embed {
 .section-1 {
     margin-top: 5rem;
     max-width: 1080px;
+    text-align: center;
 }
 
 .work-content .content-part {
@@ -691,7 +726,7 @@ embed {
 }
 
 .work-content h5{
-    font-size: 18px;
+    font-size: .9rem;
     font-weight: 600;
 }
 
@@ -722,14 +757,15 @@ embed {
 .section-5 p,
 .section-other-works p {
     width: 80%;
-    margin: 2rem auto;
+    margin: 0rem auto;
+    margin-bottom: 3rem;
 }
 
 /* detail page - other projects section */
-.section-other-works h4 {
+.section-other-works h3 {
     display: inline-block;
     color: var(--font-color);
-    line-height: 5rem;
+    line-height: 3rem;
     border-top: 1px solid var(--secondary);
 }
 
@@ -828,6 +864,21 @@ embed {
 /* media quaries min-width: 575px */
 @media (min-width: 575px) {
      /* works page */
+
+
+    .work {
+        text-align: left;
+    }
+
+    .work-2 .call-to-action{
+        text-align: right;
+    }
+
+    .work-1{
+        margin-top: 5rem;
+    }
+
+     
      .work-2 .row{
         flex-direction: row;
     }
@@ -836,7 +887,10 @@ embed {
         padding-left: 5rem;
     }
 
+   
+
     /* works-detail page */
+    
     .other-works-wrapper {
         grid-template-columns: 1fr 1fr;
     }
@@ -871,6 +925,11 @@ embed {
     }
     .footer-credit p{
         margin: 1rem;  
+    }
+
+    /* workdetails */
+    .section-1 {
+        text-align: left;
     }
 
     /* contact page */
