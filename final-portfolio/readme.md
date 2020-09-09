@@ -14,7 +14,12 @@ The assets almost were designed by myself using illustrator and XD.
 
 The lists of below assets do not belong to my own design.
 
-1, The location icon in XD files. 
+CopyRights:
+
+1, The social media icon:
+"Icon made by Pixel perfect from www.flaticon.com"
+
+The location icon in XD files. 
 <div>Location Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
 

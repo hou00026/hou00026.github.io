@@ -933,6 +933,9 @@ embed {
     }
 
     /* contact page */
+    .contact-text {
+        text-align: left;
+    }
     .contact-photo {
         display: block;
     }
