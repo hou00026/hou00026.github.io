@@ -448,11 +448,11 @@ body {
 
 /* twitter, social-media-item-2 */
 .social-media-item-2 a{ 
-    background-image: url(../icons/social-media-twitter.svg);
+    background-image: url(../icons/social-media-linkedin.svg);
 }
 
 .social-media-item-2  .gray {
-    background-image: url(../icons/twitter-hover.svg);
+    background-image: url(../icons/linkedin-hover.svg);
 }
 
 /* faceboos, social-media-item-3 */

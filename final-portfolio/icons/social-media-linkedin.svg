@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18.749" height="18.234" viewBox="0 0 18.749 18.234">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #a4adc6;
+      }
+    </style>
+  </defs>
+  <g id="Group_168" data-name="Group 168" transform="translate(-1083.758 -2873)">
+    <g id="Group_163" data-name="Group 163" transform="translate(1083.758 2877.981)">
+      <g id="Group_162" data-name="Group 162">
+        <rect id="Rectangle_400" data-name="Rectangle 400" class="cls-1" width="4.242" height="13.253"/>
+      </g>
+    </g>
+    <g id="Group_165" data-name="Group 165" transform="translate(1090.75 2877.981)">
+      <g id="Group_164" data-name="Group 164">
+        <path id="Path_221" data-name="Path 221" class="cls-1" d="M168.9,160.155c-.041-.014-.079-.03-.122-.043s-.1-.024-.155-.034a3.056,3.056,0,0,0-.686-.078,5.236,5.236,0,0,0-4.109,2.534V160H160v13.253h3.824v-7.229s2.89-4.537,4.109-1.2v8.434h3.823V164.31A4.237,4.237,0,0,0,168.9,160.155Z" transform="translate(-160 -160)"/>
+      </g>
+    </g>
+    <g id="Group_167" data-name="Group 167" transform="translate(1084 2872.906)">
+      <g id="Group_166" data-name="Group 166" transform="translate(0 0)">
+        <circle id="Ellipse_9" data-name="Ellipse 9" class="cls-1" cx="2" cy="2" r="2" transform="translate(0 0.094)"/>
+      </g>
+    </g>
+  </g>
+</svg>
