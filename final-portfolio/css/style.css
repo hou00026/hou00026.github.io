@@ -229,7 +229,6 @@ body {
     background-color: #dcdcdc9a;
 }
 
-
 .btn:hover {
     background-color: #d58c7d9a;
 }
@@ -553,6 +552,7 @@ h3 {
     margin-top: 1rem;
     font-size: .9rem;
     line-height: 32px;
+    text-align: left;
     animation: work-text 1s ease;
 }
 
@@ -704,10 +704,9 @@ embed {
 /* section-1 */
 
 .shadow-image {
-    /* border: 1px solid red; */
-    box-shadow: 5px 10px 10px var(--shadow)
-    
+    box-shadow: 5px 10px 10px var(--shadow)  
 }
+
 .section-1 {
     margin-top: 5rem;
     max-width: 1080px;
@@ -741,6 +740,10 @@ embed {
     text-align: center;
 }
 
+li {
+    padding-left: 30px;
+}
+
 .section-2 span,
 .section-3 span,
 .section-4 span,
@@ -756,9 +759,13 @@ embed {
 .section-4 p,
 .section-5 p,
 .section-other-works p {
-    width: 80%;
+    width: 100%;
     margin: 0rem auto;
     margin-bottom: 3rem;
+}
+
+.work-subheading {
+    text-align: left;
 }
 
 /* detail page - other projects section */
