@@ -30,21 +30,23 @@
 body {
     background-color: var(--primary-color);
     color: var(--font-color);
-    letter-spacing: .5px;
+    letter-spacing: .3px;
+    font-size: .9rem;
     font-weight: 300;
 }
 
 /* top-bar */
 .top-bar {
-    margin-top: 2rem;
-    margin-bottom: 5rem;
+    margin-top: 0px;
+    margin-bottom: 10rem;
+    
 }
 
 .navbar,
 .main,
 .footer {
     width: 90%;
-    margin: 0 auto; 
+    margin: 2rem auto; 
 }
 
 .navbar-brand {
@@ -72,8 +74,8 @@ body {
     position: relative;
     text-decoration: none;
     color: var(--text-color);
-    font-size: .9rem;
-    font-weight: 300;
+    font-size: 12px;
+    font-weight: 500;
     text-transform: uppercase;
     animation: nav .6s ease-in-out;
 }
@@ -88,17 +90,14 @@ body {
     position: absolute;
     top: 10px;
     left: -50px;
-    opacity: 0;
+    visibility: hidden;
 }
 
 .nav-item a:hover::after {
     left: 0px;
     transition: left .3s ease-in-out;
-    opacity: 1;
+    visibility: visible;
 }
-
-
-
 
 .nav-item a:hover{
     color: var(--secondary);  
@@ -120,6 +119,16 @@ body {
 
 .highlight {
     color: var(--secondary);
+}
+
+.check-work {
+    color: var(--font-color);
+    font-weight: bold;
+}
+
+.check-work:hover {
+    color: #D58C7D;
+    font-weight: bold;
 }
 
 /* intro-left-text */
@@ -220,7 +229,7 @@ body {
 .btn {
     width: 200px;
     height: 36px;
-    margin: 2rem auto;
+    margin: 1rem auto;
     background-color: var(--secondary);
     border-radius: 40px;
 }
@@ -260,16 +269,26 @@ body {
 
 .scroll-down {
     font-size: 12px;
-    margin-top: 10px;
-    color: var(--font-color);
+    margin-top: 10px; 
+}
+
+.scroll-down-icon {
+    position: relative;
+    animation: scroll-down 1s ease-in-out infinite alternate;
+}
+
+@keyframes scroll-down {
+    0%  {top:-20px; opacity: 0.3;}
+    75% {top:0px; opacity: 1;}
+    100%{top:-10px; opacity: 0.5;}
 }
 
 /* experience-section */
 .section-title {
     font-size: 2rem;
     line-height: 60px;
-    margin: 2rem 0 2rem 0;
-    color: var(--font-color);
+    margin: 5rem 0 0 0;
+    color: var(--secondary);
     font-weight: 500;
 }
 
@@ -284,11 +303,11 @@ body {
     position: relative;
     text-decoration: none;
     list-style: none;
-    margin-top: 4rem;
+    margin-top: 1rem;
     margin-left: 0px;
     margin-right: 0px;
     padding: 0;
-    border-right: 1px solid var(--font-color);
+    border-right: 1px solid rgba(126, 137, 167, .5);
 }
 
 /* add a decoration line on the top of the line */
@@ -348,13 +367,17 @@ body {
 }
 
 /* education section */
+.education-section {
+    margin-top: 5rem;
+}
+
 .education-school {
-    margin-top: 2rem;
+    margin-top: 0rem;
 }
 
 .education-school .school{
     border: 1px solid rgba(126, 137, 167, .5);
-    border-radius: 44px;
+    border-radius: 20px;
     margin: 1rem;
     padding: 2rem;
 }
@@ -761,7 +784,7 @@ li {
 .section-other-works p {
     width: 100%;
     margin: 0rem auto;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .work-subheading {
