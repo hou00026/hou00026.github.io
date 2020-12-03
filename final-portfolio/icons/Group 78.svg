@@ -1,0 +1,14 @@
+<svg id="Group_78" data-name="Group 78" xmlns="http://www.w3.org/2000/svg" width="71.014" height="15.072" viewBox="0 0 71.014 15.072">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7e89a7;
+      }
+    </style>
+  </defs>
+  <path id="Path_112" data-name="Path 112" class="cls-1" d="M1770.2,605.838h1.937v6.126h7.62v-6.126h1.958v14.651h-1.958v-6.862h-7.62v6.862H1770.2Z" transform="translate(-1770.202 -605.628)"/>
+  <path id="Path_113" data-name="Path 113" class="cls-1" d="M1861.768,612.718c0,4.042-2.252,7.62-6.862,7.62-4.315,0-6.714-3.326-6.714-7.536,0-4.189,2.442-7.536,6.883-7.536C1859.2,605.267,1861.768,608.362,1861.768,612.718Zm-11.535.021c0,3.158,1.6,5.936,4.757,5.936,3.389,0,4.757-2.8,4.757-5.915,0-3.157-1.537-5.831-4.757-5.831C1851.685,606.93,1850.233,609.624,1850.233,612.739Z" transform="translate(-1819.457 -605.267)"/>
+  <path id="Path_114" data-name="Path 114" class="cls-1" d="M1933.842,605.838v8.82c0,3.452,1.895,4.4,3.768,4.4,2.189,0,3.747-1.01,3.747-4.4v-8.82h1.958v8.715c0,4.757-2.631,6.125-5.747,6.125-3.052,0-5.7-1.474-5.7-5.978v-8.862Z" transform="translate(-1872.3 -605.628)"/>
+  <ellipse id="Ellipse_6" data-name="Ellipse 6" class="cls-1" cx="0.716" cy="0.716" rx="0.716" ry="0.716" transform="translate(20.452 6.486)"/>
+  <ellipse id="Ellipse_7" data-name="Ellipse 7" class="cls-1" cx="0.716" cy="0.716" rx="0.716" ry="0.716" transform="translate(49.072 6.486)"/>
+</svg>

@@ -15,7 +15,7 @@
 :root {
     --font-color:#32426C;
     --text-color:#647194;
-    --secondary:#D58C7D; 
+    --secondary:#dc7e6b; 
     --primary-color:#F6F6F8;
     --white:#ffffff;
     --shadow:rgba(125, 146, 202, 0.119); 
@@ -37,26 +37,26 @@ body {
 
 /* top-bar */
 .top-bar {
-    margin-top: 0px;
-    margin-bottom: 10rem;
-    
+    margin-top: 30px;
+    margin-bottom: 8rem;
 }
 
 .navbar,
 .main,
 .footer {
-    width: 90%;
-    margin: 2rem auto; 
+    width: 100%;
+    margin: 0 auto; 
+    padding: 0rem 2rem;
 }
 
 .navbar-brand {
     position: relative;
-    left: -50px;
+    left: -10px;
     transition: .3s ease;
 }
 
 .navbar-brand:hover {
-    left: -35px;
+    left: 13px;
     transition: .3s ease; 
 }
 
@@ -112,7 +112,7 @@ body {
 .intro-section,
 .experience-section,
 .education-section {
-    max-width: 1080px;
+    /* max-width: 1080px; */
     margin: 0 auto;
     margin-top: 5rem;
 }
@@ -368,7 +368,7 @@ body {
 
 /* education section */
 .education-section {
-    margin-top: 5rem;
+    margin-top: 10rem;
 }
 
 .education-school {
@@ -396,12 +396,42 @@ body {
     margin-top: 2rem;
 }
 
+/* link-section */
+.sum-section {
+    margin-top: 5rem;
+    text-align: center;  
+}
+
+.priciples-wraper {
+    padding-top: 2rem;
+}
+
+.priciples-detail {
+    border-left: 1px solid rgba(126, 137, 167, .5);
+    padding-left: 1rem;
+}
+
+.priciples-wraper h4{
+    font-size: 1.2rem;
+    line-height: 48px;
+    margin-top: 1rem;
+}
+
+.sum-section .bottom-btn{
+    text-decoration: none;
+}
+
+.sum-section .btn:hover {
+    background-color: #c3cace9a;
+}
+
+
 /* footer */
 .footer-wrapper {
     width: 100%;
-    border-top: 1px solid var(--text-color);
+    border-top: 1px solid rgba(126, 137, 167, .5);
     padding: 2rem 0;
-    margin-top: 5rem;
+    margin-top: 7rem;
 }
 
 /* set flex to make social- media display horizantally */
@@ -497,7 +527,6 @@ body {
     'logo media'
     'credit credit';
     grid-gap: 2rem 1rem;
-    padding: 2rem 0;
 }
 
 .footer-logo {
@@ -663,7 +692,6 @@ embed {
 
 /* contact page */
 .contact-section{
-    margin-top: 5rem;
     text-align: center;
 }
 
@@ -689,7 +717,7 @@ embed {
 .contact-text,
 .contact-info {
     position: relative;
-    margin-top: 2rem;
+    margin-top: 0rem;
     color: var(--font-color);
     font-size: .9rem;
     line-height: 32px;  
@@ -727,7 +755,7 @@ embed {
 /* section-1 */
 
 .shadow-image {
-    box-shadow: 5px 10px 10px var(--shadow)  
+    box-shadow: 5px 10px 10px var(--shadow); 
 }
 
 .section-1 {
@@ -799,15 +827,18 @@ li {
     border-top: 1px solid var(--secondary);
 }
 
-.other-works-wrapper {
+.other-works-wrapper,
+.priciples-wraper {
+    width: 100%;
+    margin: 0 auto; 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: auto auto auto;
     grid-gap: 2rem;
 }
 
 .other-works-bakery {
-    border-radius: 25px;
+    box-shadow: 5px 10px 10px var(--shadow);
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -817,25 +848,25 @@ li {
     width: 100%;
 }
 
-.bakery-thumnail img,
+.mobile-homedepot-thumnail img,
 .avatar-thumnail img,
 .bonsai-thumnail img,
 .fund-logo-thumnail img{
     max-width:100%;
-    transform: scale(1);
-    transition: .5s ease-in-out; 
+    /* transform: scale(1); */
+    transition: .2s ease-out; 
 }
 
-.bakery-thumnail:hover img,
+.mobile-homedepot-thumnail:hover img,
 .avatar-thumnail:hover img,
 .bonsai-thumnail:hover img,
 .fund-logo-thumnail:hover img{
-    transform: scale(1.06);
+    transform: scale(1.05);
     transition: .3s ease-in-out;
 }
 
 /* use pseudo elements to give a hover status color overlap the image */
-.bakery-thumnail:hover::before,
+.mobile-homedepot-thumnail:hover::before,
 .avatar-thumnail:hover::before,
 .bonsai-thumnail:hover::before,
 .fund-logo-thumnail:hover::before {
@@ -850,7 +881,7 @@ li {
 } 
 
 /* add the project name when hover the image. The method is add a pseodo and use position to move it to center center. */
-.bakery-thumnail::after,
+.mobile-homedepot-thumnail::after,
 .avatar-thumnail::after,
 .bonsai-thumnail::after,
 .fund-logo-thumnail::after {
@@ -863,15 +894,15 @@ li {
     z-index: 9999;
     color: var(--primary-color);
     opacity: 0;
-    transition: .3s ease-in;
+    transition: .3s ease-in-out;
 }
 
-.bakery-thumnail:hover::after,
+.mobile-homedepot-thumnail:hover::after,
 .avatar-thumnail:hover::after,
 .bonsai-thumnail:hover::after,
 .fund-logo-thumnail:hover::after {
     opacity: 1;
-    transition: .3s ease-in;
+    transition: .3s ease-in-out;
 }
 
 .avatar-thumnail::after {
@@ -882,19 +913,22 @@ li {
     content: "Website Redesign";
 }
 
-.avatar-thumnail:hover::after {
+/* .avatar-thumnail:hover::after {
     content: "Avatar Design";
-}
+} */
 
 .fund-logo-thumnail::after {
     content: "Logo Desgin";
+}
+
+.mobile-homedepot-thumnail::after {
+    content: "Mobile App Redesgin";
 }
 
 
 /* media quaries min-width: 575px */
 @media (min-width: 575px) {
      /* works page */
-
 
     .work {
         text-align: left;
@@ -917,12 +951,11 @@ li {
         padding-left: 5rem;
     }
 
-   
-
     /* works-detail page */
     
-    .other-works-wrapper {
-        grid-template-columns: 1fr 1fr;
+    .other-works-wrapper,
+    .priciples-wraper {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
 }

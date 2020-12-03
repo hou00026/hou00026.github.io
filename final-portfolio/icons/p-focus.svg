@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="51.523" height="50.068" viewBox="0 0 51.523 50.068">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #32426c;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1 {
+        stroke-width: 0.5px;
+      }
+    </style>
+  </defs>
+  <g id="Group_154" data-name="Group 154" transform="translate(-955.643 -651.5)">
+    <path id="Path_304" data-name="Path 304" class="cls-1" d="M1001.866,686.8" transform="translate(-15.809 -12.031)"/>
+    <path id="Path_305" data-name="Path 305" class="cls-1" d="M996.273,685.838a5.662,5.662,0,1,1-5.623-4.992,5.88,5.88,0,0,1,.638.035" transform="translate(-9.974 -9.974)"/>
+    <path id="Path_306" data-name="Path 306" class="cls-1" d="M993.527,668.615a15.081,15.081,0,1,0,5.674,6.447m-2.774,1.891a11.845,11.845,0,1,1-5.159-5.95" transform="translate(-4.928 -4.945)"/>
+    <path id="Path_307" data-name="Path 307" class="cls-2" d="M1009.455,655.487a24.507,24.507,0,0,1,4.06,2.39" transform="translate(-18.433 -1.206)"/>
+    <path id="Path_308" data-name="Path 308" class="cls-2" d="M1002.25,664.84A24.5,24.5,0,1,1,988.9,653.411" transform="translate(0 0)"/>
+    <path id="Path_309" data-name="Path 309" class="cls-1" d="M989.906,676.011l.383-1.986a.8.8,0,0,1,1.394-.368l.767.9,3.223-2.745,14.235-12.13a.562.562,0,0,1-.828-.606l.533-2.461a.575.575,0,0,1,.185-.311l2.931-2.5a.562.562,0,0,1,.914.544l-.533,2.464" transform="translate(-11.674 -0.577)"/>
+    <path id="Path_310" data-name="Path 310" class="cls-1" d="M989.643,690.19a.791.791,0,0,1-.139-.625l.108-.561" transform="translate(-11.529 -12.794)"/>
+    <path id="Path_311" data-name="Path 311" class="cls-1" d="M991.252,682.2a.793.793,0,0,0,.595.239l3.382-.09a.8.8,0,0,0,.59-1.315l-.761-.9,3.235-2.731,14.293-12.062a.562.562,0,0,0,.463.917l2.516-.124a.575.575,0,0,0,.337-.132l2.942-2.483a.562.562,0,0,0-.388-.991l-2.518.124" transform="translate(-12.139 -3.638)"/>
+  </g>
+</svg>
