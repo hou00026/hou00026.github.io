@@ -398,23 +398,25 @@ body {
 
 /* link-section */
 .sum-section {
-    margin-top: 5rem;
+    margin-top: 6rem;
     text-align: center;  
+}
+
+.priciples-section {
+    margin-top: 10rem;
 }
 
 .priciples-wraper {
     padding-top: 2rem;
 }
 
+.priciples-wrapper img {
+    margin: 1rem 0 1rem 0;
+}
+
 .priciples-detail {
     border-left: 1px solid rgba(126, 137, 167, .5);
     padding-left: 1rem;
-}
-
-.priciples-wraper h4{
-    font-size: 1.2rem;
-    line-height: 48px;
-    margin-top: 1rem;
 }
 
 .sum-section .bottom-btn{
@@ -507,7 +509,7 @@ body {
     background-image: url(../icons/linkedin-hover.svg);
 }
 
-/* faceboos, social-media-item-3 */
+/* facebook, social-media-item-3 */
 .social-media-item-3 a{
     background-image: url(../icons/social-media-facebook.svg);
 }
@@ -693,6 +695,7 @@ embed {
 /* contact page */
 .contact-section{
     text-align: center;
+    margin-bottom: 10rem;
 }
 
 /* practically like the home page styling */
@@ -785,10 +788,15 @@ embed {
 .section-3,
 .section-4,
 .section-5,
-.section-other-works {
+.section-other-works,
+.section-gallery {
     max-width: 1080px;
     margin-top: 10rem;
     text-align: center;
+}
+
+.section-gallery {
+    margin-top: 12rem;
 }
 
 li {
@@ -820,7 +828,8 @@ li {
 }
 
 /* detail page - other projects section */
-.section-other-works h3 {
+.section-other-works h3,
+.section-gallery h3 {
     display: inline-block;
     color: var(--font-color);
     line-height: 3rem;
@@ -828,9 +837,10 @@ li {
 }
 
 .other-works-wrapper,
-.priciples-wraper {
+.priciples-wrapper,
+.gallery-wrapper {
     width: 100%;
-    margin: 0 auto; 
+    margin: 1rem auto; 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
@@ -851,7 +861,8 @@ li {
 .mobile-homedepot-thumnail img,
 .avatar-thumnail img,
 .bonsai-thumnail img,
-.fund-logo-thumnail img{
+.fund-logo-thumnail img,
+.gallery-thumnail img {
     max-width:100%;
     /* transform: scale(1); */
     transition: .2s ease-out; 
@@ -860,7 +871,8 @@ li {
 .mobile-homedepot-thumnail:hover img,
 .avatar-thumnail:hover img,
 .bonsai-thumnail:hover img,
-.fund-logo-thumnail:hover img{
+.fund-logo-thumnail:hover img,
+.gallery-thumnail:hover img {
     transform: scale(1.05);
     transition: .3s ease-in-out;
 }
@@ -869,7 +881,8 @@ li {
 .mobile-homedepot-thumnail:hover::before,
 .avatar-thumnail:hover::before,
 .bonsai-thumnail:hover::before,
-.fund-logo-thumnail:hover::before {
+.fund-logo-thumnail:hover::before,
+.gallery-thumnail:hover::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -884,7 +897,8 @@ li {
 .mobile-homedepot-thumnail::after,
 .avatar-thumnail::after,
 .bonsai-thumnail::after,
-.fund-logo-thumnail::after {
+.fund-logo-thumnail::after,
+.gallery-thumnail::after {
     content: "Bakery Website";
     font-size: 1.3rem;
     position: absolute;
@@ -900,7 +914,8 @@ li {
 .mobile-homedepot-thumnail:hover::after,
 .avatar-thumnail:hover::after,
 .bonsai-thumnail:hover::after,
-.fund-logo-thumnail:hover::after {
+.fund-logo-thumnail:hover::after,
+.gallery-thumnail:hover::after {
     opacity: 1;
     transition: .3s ease-in-out;
 }
@@ -913,16 +928,67 @@ li {
     content: "Website Redesign";
 }
 
-/* .avatar-thumnail:hover::after {
-    content: "Avatar Design";
-} */
-
 .fund-logo-thumnail::after {
     content: "Logo Desgin";
 }
 
 .mobile-homedepot-thumnail::after {
     content: "Mobile App Redesgin";
+}
+
+.gallery-thumnail::after {
+    content: "Gallery";
+}
+
+/* gallery page */
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-rows: 250px;
+    grid-gap: 40px;
+}
+
+.gallery-images {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--shadow);
+    box-shadow: 5px 5px 10px var(--shadow);
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-images .image {
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    transform: scale(1);
+    transition: .3s ease-out;
+}
+
+.gallery-images:hover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    transform: scale(1.05);
+    transition: .3s ease-out;
+}
+
+.gallery-images .text {
+    position: absolute;
+    bottom:0px;
+    right:0px;
+    margin: 10px;
+    color:white;
+    font-size: 1.5rem;
+    pointer-events: none;
 }
 
 
@@ -954,9 +1020,21 @@ li {
     /* works-detail page */
     
     .other-works-wrapper,
-    .priciples-wraper {
+    .priciples-wrapper {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    /* gallery page */
+    .gallery-container {
+        grid-template-columns: repeat(1,1fr);
+        grid-auto-rows: 350px 350px 350px 350px 450px 450px;
+    }
+
+    .gallery-wrapper {
+        width: 50%;
+        grid-template-columns: 1fr;
+    }
+    
 
 }
 
@@ -1001,6 +1079,11 @@ li {
     }
     .contact-photo {
         display: block;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows: 250px 250px 450px;
     }
 
 }
