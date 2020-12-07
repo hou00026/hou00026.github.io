@@ -411,12 +411,11 @@ body {
 }
 
 .priciples-wrapper img {
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0 2rem 0;
 }
 
-.priciples-detail {
-    border-left: 1px solid rgba(126, 137, 167, .5);
-    padding-left: 1rem;
+.front-line {
+    color: var(--secondary);
 }
 
 .sum-section .bottom-btn{
@@ -795,10 +794,6 @@ embed {
     text-align: center;
 }
 
-.section-gallery {
-    margin-top: 12rem;
-}
-
 li {
     padding-left: 30px;
 }
@@ -844,7 +839,7 @@ li {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-    grid-gap: 2rem;
+    grid-gap: 3rem;
 }
 
 .other-works-bakery {
@@ -1024,6 +1019,7 @@ li {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+   
     /* gallery page */
     .gallery-container {
         grid-template-columns: repeat(1,1fr);
