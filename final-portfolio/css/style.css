@@ -801,7 +801,8 @@ li {
 .section-2 span,
 .section-3 span,
 .section-4 span,
-.section-5 span {
+.section-5 span,
+.section-gallery span{
     display: block;
     font-size: 12px;
     color: var(--secondary);
