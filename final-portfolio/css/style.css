@@ -70,10 +70,6 @@ body {
     margin-left: 3rem; 
 }
 
-.nav-item:last-child {
-    border: 1px solid var(--font-color);
-}
-
 .nav-item a {
     position: relative;
     text-decoration: none;
@@ -96,7 +92,7 @@ body {
     }
 }
 
-.nav-item .navitem-text::after {
+.nav-item a::after {
     content: url(../icons/hover-line.svg);
     position: absolute;
     top: 10px;
@@ -104,14 +100,10 @@ body {
     visibility: hidden;
 }
 
-.nav-item .navitem-text:hover::after {
+.nav-item a:hover::after {
     left: 0px;
     transition: left .3s ease-in-out;
     visibility: visible;
-}
-
-.nav-item:hover:last-child{
-    border: 1px solid var(--secondary);
 }
 
 .nav-item a:hover {
