@@ -584,6 +584,10 @@ body {
     grid-area: media;
 }
 
+.footer-credit p::after {
+    content: " | Last modified: December 1, 2020.";
+}
+
 .footer-credit {
     grid-area: credit;
     font-size: 10px;
