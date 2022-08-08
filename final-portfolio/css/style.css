@@ -288,7 +288,7 @@ body {
 .btn span {
     /* text-transform: uppercase; */
     color: #eddfdd;
-    font-size: 12px;
+    font-size: .9rem;
     font-weight: 500;
 }
 
@@ -585,12 +585,12 @@ body {
 }
 
 .footer-credit p::after {
-    content: " | Last modified: December 1, 2020.";
+    content: " | Last modified: August 7, 2022";
 }
 
 .footer-credit {
     grid-area: credit;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: .3px;
     font-weight: 400;
     color: var(--text-color);
@@ -602,11 +602,11 @@ body {
     align-items: center;
     position: fixed;
     bottom: 100px;
-    right: 15px;
+    right: 25px;
 }
 
 .back-to-top p {
-    font-size: 9px;
+    font-size: 12px;
     font-weight: 500;
     color: var(--secondary);
 }
@@ -667,7 +667,7 @@ h3 {
 .work-text {
     position: relative;
     margin-top: 1rem;
-    font-size: .9rem;
+    font-size: 1.1rem;
     line-height: 32px;
     text-align: left;
     animation: work-text 1s ease;
