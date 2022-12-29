@@ -585,7 +585,7 @@ body {
 }
 
 .footer-credit p::after {
-    content: " | Last modified: August 7, 2022";
+    content: " Designed & built by Jiuyan Hou | Last modified: Dec 29, 2022";
 }
 
 .footer-credit {
@@ -940,9 +940,9 @@ button[type="submit"]:hover {
 /* work-detail page */
 /* section-1 */
 
-.shadow-image {
+/* .shadow-image {
     box-shadow: 5px 10px 10px var(--shadow);
-}
+} */
 
 .section-1 {
     margin-top: 5rem;
@@ -1046,6 +1046,7 @@ li {
 }
 
 .mobile-homedepot-thumnail img,
+.transit-planner-thumnail img
 .avatar-thumnail img,
 .bonsai-thumnail img,
 .fund-logo-thumnail img,
@@ -1056,6 +1057,7 @@ li {
 }
 
 .mobile-homedepot-thumnail:hover img,
+.transit-planner-thumnail:hover img,
 .avatar-thumnail:hover img,
 .bonsai-thumnail:hover img,
 .fund-logo-thumnail:hover img,
@@ -1066,6 +1068,7 @@ li {
 
 /* use pseudo elements to give a hover status color overlap the image */
 .mobile-homedepot-thumnail:hover::before,
+.transit-planner-thumnail:hover::before,
 .avatar-thumnail:hover::before,
 .bonsai-thumnail:hover::before,
 .fund-logo-thumnail:hover::before,
@@ -1082,6 +1085,7 @@ li {
 
 /* add the project name when hover the image. The method is add a pseodo and use position to move it to center center. */
 .mobile-homedepot-thumnail::after,
+.transit-planner-thumnail::after,
 .avatar-thumnail::after,
 .bonsai-thumnail::after,
 .fund-logo-thumnail::after,
@@ -1099,12 +1103,17 @@ li {
 }
 
 .mobile-homedepot-thumnail:hover::after,
+.transit-planner-thumnail:hover::after,
 .avatar-thumnail:hover::after,
 .bonsai-thumnail:hover::after,
 .fund-logo-thumnail:hover::after,
 .gallery-thumnail:hover::after {
     opacity: 1;
     transition: .3s ease-in-out;
+}
+
+.transit-planner-thumnail::after {
+    content: "Transit Planner Redesign";
 }
 
 .avatar-thumnail::after {
