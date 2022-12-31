@@ -1046,7 +1046,8 @@ li {
 }
 
 .mobile-homedepot-thumnail img,
-.transit-planner-thumnail img
+.transit-planner-thumnail img,
+.loading-thumnail img,
 .avatar-thumnail img,
 .bonsai-thumnail img,
 .fund-logo-thumnail img,
@@ -1058,6 +1059,7 @@ li {
 
 .mobile-homedepot-thumnail:hover img,
 .transit-planner-thumnail:hover img,
+.loading-thumnail:hover:hover img,
 .avatar-thumnail:hover img,
 .bonsai-thumnail:hover img,
 .fund-logo-thumnail:hover img,
@@ -1069,6 +1071,7 @@ li {
 /* use pseudo elements to give a hover status color overlap the image */
 .mobile-homedepot-thumnail:hover::before,
 .transit-planner-thumnail:hover::before,
+.loading-thumnail:hover::before,
 .avatar-thumnail:hover::before,
 .bonsai-thumnail:hover::before,
 .fund-logo-thumnail:hover::before,
@@ -1086,6 +1089,7 @@ li {
 /* add the project name when hover the image. The method is add a pseodo and use position to move it to center center. */
 .mobile-homedepot-thumnail::after,
 .transit-planner-thumnail::after,
+.loading-thumnail::after,
 .avatar-thumnail::after,
 .bonsai-thumnail::after,
 .fund-logo-thumnail::after,
@@ -1104,6 +1108,7 @@ li {
 
 .mobile-homedepot-thumnail:hover::after,
 .transit-planner-thumnail:hover::after,
+.loading-thumnail:hover::after,
 .avatar-thumnail:hover::after,
 .bonsai-thumnail:hover::after,
 .fund-logo-thumnail:hover::after,
@@ -1111,7 +1116,9 @@ li {
     opacity: 1;
     transition: .3s ease-in-out;
 }
-
+.loading-thumnail::after{
+    content: "Loading Animation";
+}
 .transit-planner-thumnail::after {
     content: "Transit Planner Redesign";
 }
